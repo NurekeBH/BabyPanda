@@ -47,9 +47,10 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -136,8 +137,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # API қолжетімділігі
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React девсервер
+    "https://marua.kz",
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 # DRF және JWT орнату
 REST_FRAMEWORK = {
