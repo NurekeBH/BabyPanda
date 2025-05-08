@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: baby-panda-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn ps_project.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: ps_project.settings
+      - key: PYTHON_VERSION
+        value: 3.11
