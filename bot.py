@@ -9,11 +9,9 @@ from telegram.ext import (
 import requests
 
 BOT_TOKEN = "7663338099:AAFtO9KiInm1jFNOQq-2RKSw_5SdqPMvnew"  # ← Боттың токенін қойыңыз
-DJANGO_API_URL = (
-    "http://127.0.0.1:8000/api/check-phone/"  # ← Localhost немесе live сервер URL
-)
+DJANGO_API_URL = "https://baby-panda-backend.onrender.com/api/check-phone/"  # ← Localhost немесе live сервер URL
 
-WEBAPP_URL = "http://localhost:3000/"  # ← кейін Web App сілтемесі
+WEBAPP_URL = "https://marua.kz/"  # ← кейін Web App сілтемесі
 
 MANAGER_INFO = "Сіз VIP клиент ретінде тіркелмегенсіз.\n" "Байланыс: +7 777 123 4567"
 
@@ -66,3 +64,6 @@ if __name__ == "__main__":
     print("🤖 Telegram бот іске қосылды!")
     app.run_polling()
 о
+
+
+# https://api.telegram.org/bot7663338099:AAFtO9KiInm1jFNOQq-2RKSw_5SdqPMvnew/setWebhook?url=https://marua.kz/bot.php

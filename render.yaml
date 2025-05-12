@@ -3,6 +3,7 @@ services:
     name: baby-panda-backend
     env: python
     buildCommand: pip install -r requirements.txt
+      python manage.py collectstatic --noinput
     startCommand: gunicorn ps_project.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
